@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'common/utils/colors.dart';
 import 'features/chat/widgets/contacts_list.dart';
 import 'features/contacts/screens/contacts_screen.dart';
@@ -9,10 +8,10 @@ class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
 
   @override
-  _MainScreenState createState() => _MainScreenState();
+  MainScreenState createState() => MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen>
+class MainScreenState extends State<MainScreen>
     with WidgetsBindingObserver, TickerProviderStateMixin {
   bool isSearching = false;
 

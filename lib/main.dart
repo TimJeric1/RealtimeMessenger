@@ -2,9 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:realtime_messenger/features/auth/screens/login_screen.dart';
-import 'package:realtime_messenger/features/auth/screens/otp_screen.dart';
-import 'package:realtime_messenger/features/auth/screens/user_information_screen.dart';
 import 'package:realtime_messenger/router.dart';
 
 import 'common/models/user_model.dart';

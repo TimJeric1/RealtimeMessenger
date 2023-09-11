@@ -24,10 +24,10 @@ class DisplayTextImageGIF extends StatelessWidget {
     );
   }
 
-  Widget displayAudioMessage() {
+  Widget displayAudioMessage(bool isPlaying) {
     return StatefulBuilder(
       builder: (context, setState) {
-        bool isPlaying = false;
+
         final AudioPlayer audioPlayer = AudioPlayer();
 
         return IconButton(
@@ -69,11 +69,12 @@ class DisplayTextImageGIF extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isPlaying = false;
     switch (type) {
       case MessageEnum.text:
         return displayTextMessage();
       case MessageEnum.audio:
-        return displayAudioMessage();
+        return displayAudioMessage(isPlaying);
       case MessageEnum.video:
         return _videoMessage();
       case MessageEnum.gif:

@@ -49,6 +49,9 @@ class ContactRepository {
 
       if (userExists) {
         var userData = await firestore.collection('users').where('phoneNumber', isEqualTo: selectedPhoneNum).get().then((snapshot) => UserModel.fromMap(snapshot.docs.first.data()));
+
+        if (!context.mounted) return;
+
         Navigator.pushNamed(
           context,
           ChatScreen.routeName,
@@ -59,6 +62,7 @@ class ContactRepository {
           },
         );
       } else {
+        if (!context.mounted) return;
         showSnackBar(
           context: context,
           content: 'This number does not exist on this app.',

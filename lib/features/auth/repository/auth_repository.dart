@@ -61,6 +61,7 @@ class AuthRepository {
         codeAutoRetrievalTimeout: (String verificationId) {},
       );
     } on FirebaseAuthException catch (e) {
+      if(!context.mounted) return;
       showSnackBar(context: context, content: e.message!);
     }
   }
@@ -76,6 +77,7 @@ class AuthRepository {
         smsCode: userOTP,
       );
       await _auth.signInWithCredential(credential);
+      if(!context.mounted) return;
       Navigator.pushNamedAndRemoveUntil(
         context,
         UserInformationScreen.routeName,
@@ -117,6 +119,7 @@ class AuthRepository {
 
       await _firestore.collection('users').doc(uid).set(user.toMap());
 
+      if(!context.mounted) return;
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(

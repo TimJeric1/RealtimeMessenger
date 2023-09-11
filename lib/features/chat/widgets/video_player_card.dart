@@ -10,10 +10,10 @@ class VideoPlayerCard extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _VideoPlayerCardState createState() => _VideoPlayerCardState();
+  VideoPlayerCardState createState() => VideoPlayerCardState();
 }
 
-class _VideoPlayerCardState extends State<VideoPlayerCard> {
+class VideoPlayerCardState extends State<VideoPlayerCard> {
   late CachedVideoPlayerController videoPlayerController;
   bool isPlaying = false;
 

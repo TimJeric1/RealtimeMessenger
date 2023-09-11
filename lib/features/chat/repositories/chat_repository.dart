@@ -196,10 +196,11 @@ class ChatRepository {
         messageType: MessageEnum.text,
         messageId: messageId,
         username: senderUser.name,
-        recieverUserName: recieverUserData?.name,
+        recieverUserName: recieverUserData.name,
         senderUsername: senderUser.name,
       );
     } catch (e) {
+      if(!context.mounted) return;
       showSnackBar(context: context, content: e.toString());
     }
   }
@@ -262,10 +263,11 @@ class ChatRepository {
         messageId: messageId,
         username: senderUserData.name,
         messageType: messageEnum,
-        recieverUserName: recieverUserData?.name,
+        recieverUserName: recieverUserData.name,
         senderUsername: senderUserData.name,
       );
     } catch (e) {
+      if(!context.mounted) return;
       showSnackBar(context: context, content: e.toString());
     }
   }
@@ -301,10 +303,11 @@ class ChatRepository {
         messageType: MessageEnum.gif,
         messageId: messageId,
         username: senderUser.name,
-        recieverUserName: recieverUserData?.name,
+        recieverUserName: recieverUserData.name,
         senderUsername: senderUser.name,
       );
     } catch (e) {
+      if(!context.mounted) return;
       showSnackBar(context: context, content: e.toString());
     }
   }

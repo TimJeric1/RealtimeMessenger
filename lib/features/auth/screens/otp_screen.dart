@@ -79,6 +79,6 @@ class OTPScreen extends ConsumerWidget {
   }
 
   Widget _spacer() {
-    return SizedBox(height: 250);
+    return const SizedBox(height: 250);
   }
 }

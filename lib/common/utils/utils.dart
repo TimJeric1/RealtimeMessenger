@@ -22,14 +22,16 @@ Future<File?> pickImageFromGallery(BuildContext context) async {
       image = File(pickedImage.path);
     }
   } catch (e) {
-    showSnackBar(context: context, content: e.toString());
+    if(context.mounted) {
+      showSnackBar(context: context, content: e.toString());
+    }
   }
   return image;
 }
 
 Uint8List stringTobytes(String source) {
   final List<int> list = [];
-  source.runes.forEach((rune) {
+  for (var rune in source.runes) {
     if (rune >= 0x10000) {
       rune -= 0x10000;
       int firstWord = (rune >> 10) + 0xD800;
@@ -42,7 +44,7 @@ Uint8List stringTobytes(String source) {
       list.add(rune >> 8);
       list.add(rune & 0xFF);
     }
-  });
+  }
   Uint8List bytes = Uint8List.fromList(list);
   return bytes;
 }
@@ -77,7 +79,9 @@ Future<File?> pickVideoFromGallery(BuildContext context) async {
       video = File(pickedVideo.path);
     }
   } catch (e) {
-    showSnackBar(context: context, content: e.toString());
+    if(context.mounted) {
+      showSnackBar(context: context, content: e.toString());
+    }
   }
   return video;
 }
@@ -90,7 +94,9 @@ Future<GiphyGif?> pickGIF(BuildContext context) async {
       apiKey: 'PXXwAnwOsO7k1Q6Jk0mmEmBiEcucu1RG',
     );
   } catch (e) {
-    showSnackBar(context: context, content: e.toString());
+    if(context.mounted) {
+      showSnackBar(context: context, content: e.toString());
+    }
   }
   return gif;
 }

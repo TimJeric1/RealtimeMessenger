@@ -14,11 +14,11 @@ class UserModel {
 
   Map<String, dynamic> toMap() {
     return {
-      'name': this.name,
-      'uid': this.uid,
-      'profilePic': this.profilePic,
-      'isOnline': this.isOnline,
-      'phoneNumber': this.phoneNumber,
+      'name': name,
+      'uid': uid,
+      'profilePic': profilePic,
+      'isOnline': isOnline,
+      'phoneNumber': phoneNumber,
     };
   }
 

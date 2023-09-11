@@ -108,6 +108,7 @@ class _ChatFieldState extends ConsumerState<ChatField> {
   void selectGIF() async {
     final gif = await pickGIF(context);
     if (gif != null) {
+      if(!context.mounted) return;
       ref.read(chatControllerProvider).sendGIFMessage(
         context,
         gif.url,
@@ -158,7 +159,7 @@ class _ChatFieldState extends ConsumerState<ChatField> {
             Expanded(
               child: _textFormField(),
             ),
-            _send_record_button(),
+            _sendRecordButton(),
           ],
         ),
         shouldShowEmojiContainer
@@ -188,7 +189,7 @@ class _ChatFieldState extends ConsumerState<ChatField> {
       );
   }
 
-  Padding _send_record_button() {
+  Padding _sendRecordButton() {
     return Padding(
             padding: const EdgeInsets.only(
               bottom: 8,
@@ -220,7 +221,7 @@ class _ChatFieldState extends ConsumerState<ChatField> {
               onChanged: _onTextChange,
               decoration: InputDecoration(
                 filled: true,
-                fillColor: ChatBoxColor,
+                fillColor: chatBoxColor,
                 prefixIcon: _prefixIcons(),
                 suffixIcon: _suffixIcons(),
                 hintText: 'Type a message!',

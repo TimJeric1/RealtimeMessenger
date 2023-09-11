@@ -31,7 +31,7 @@ class _ChatListState extends ConsumerState<ChatList> {
   }
 
   void scrollToLatestMessage() {
-    SchedulerBinding.instance!.addPostFrameCallback((_) {
+    SchedulerBinding.instance.addPostFrameCallback((_) {
       messageController.jumpTo(messageController.position.maxScrollExtent);
     });
   }

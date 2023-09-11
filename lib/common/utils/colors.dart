@@ -8,7 +8,7 @@ const appBarColor = Color.fromRGBO(48, 63, 159, 1);
 const buttonColor = Color.fromRGBO(255, 87, 34, 1);
 const searchBarColor = Color.fromRGBO(33, 150, 243, 1);
 const dividerColor = Color.fromRGBO(189, 189, 189, 1);
-const ChatBoxColor = Color.fromRGBO(96, 125, 139, 1);
+const chatBoxColor = Color.fromRGBO(96, 125, 139, 1);
 const senderMessageColor = Color.fromRGBO(110, 190, 110, 1);
 const myMessageColor = Color.fromRGBO(76, 175, 80, 1);
 

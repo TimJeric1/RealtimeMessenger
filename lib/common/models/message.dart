@@ -44,14 +44,7 @@ class Message {
 
   @override
   String toString() {
-    return 'Message{' +
-        ' senderId: $senderId,' +
-        ' recieverid: $recieverid,' +
-        ' text: $text,' +
-        ' type: $type,' +
-        ' timeSent: $timeSent,' +
-        ' messageId: $messageId,'+
-        '}';
+    return 'Message{ senderId: $senderId, recieverid: $recieverid, text: $text, type: $type, timeSent: $timeSent, messageId: $messageId,}';
   }
 
   Message copyWith({
@@ -78,12 +71,12 @@ class Message {
 
   Map<String, dynamic> toMapJson() {
     return {
-      'senderId': this.senderId,
-      'recieverid': this.recieverid,
-      'text': this.text,
-      'type': this.type.enumToString(),
-      'timeSent': this.timeSent.millisecondsSinceEpoch,
-      'messageId': this.messageId,
+      'senderId': senderId,
+      'recieverid': recieverid,
+      'text': text,
+      'type': type.enumToString(),
+      'timeSent': timeSent.millisecondsSinceEpoch,
+      'messageId': messageId,
     };
   }
 
