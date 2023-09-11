@@ -27,13 +27,25 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.386010527533-j3tmpnav2hjdu3j8hr15ao99p432ijmv</string>
+				<string>app-1-386010527533-ios-f156bb480821bd255a85a4</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Needs to hear recordings</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera Library Use</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Contact list to chat</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Mic Use</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo Library Use</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -54,17 +66,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Photo Library Use</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Camera Library Use</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Mic Use</string>
-	<key>NSContactsUsageDescription</key>
-	<string>Contact list to chat</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>Needs to hear recordings</string>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
 </dict>
 </plist>
