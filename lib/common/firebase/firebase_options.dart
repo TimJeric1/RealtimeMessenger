@@ -59,12 +59,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyD-bLCaChY_HdcCOOxV8-p0QFuJq-o59WA',
-    appId: '1:386010527533:ios:330f870baebe96fe5a85a4',
+    appId: '1:386010527533:ios:bf38c2e4a865de565a85a4',
     messagingSenderId: '386010527533',
     projectId: 'realtime-messenger-c5b68',
     storageBucket: 'realtime-messenger-c5b68.appspot.com',
-    androidClientId: '386010527533-he52f6eukkh02e4vsapuu9gc89r7pfc7.apps.googleusercontent.com',
-    iosClientId: '386010527533-j3tmpnav2hjdu3j8hr15ao99p432ijmv.apps.googleusercontent.com',
-    iosBundleId: 'com.example.whatsappUi',
+    androidClientId: '386010527533-c01h533o4dqnndj9apn7uvfakl00f17e.apps.googleusercontent.com',
+    iosBundleId: 'com.example.RealtimeMessenger',
   );
 }
