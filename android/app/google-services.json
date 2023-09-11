@@ -14,14 +14,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "386010527533-c01h533o4dqnndj9apn7uvfakl00f17e.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.timjeric.realtime_messenger",
-            "certificate_hash": "2d7d557ef66c498c1ca1e86a2499c813462d21d0"
-          }
-        },
-        {
           "client_id": "386010527533-8rp7ti86gavpn0fbef1vbeeqbehsdu0f.apps.googleusercontent.com",
           "client_type": 3
         }
