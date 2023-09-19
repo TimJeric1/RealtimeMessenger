@@ -27,41 +27,25 @@ class AuthController {
     return await authRepository.getCurrentUserData();
   }
 
-  void _executeWithContext({
-    required BuildContext context,
-    required Function(BuildContext) callback,
-  }) {
-    callback(context);
-  }
-
   void signInWithPhone(BuildContext context, String phoneNumber) {
-    _executeWithContext(
-      context: context,
-      callback: (ctx) => authRepository.signInWithPhone(ctx, phoneNumber),
-    );
+    authRepository.signInWithPhone(context, phoneNumber);
   }
 
   void verifyOTP(BuildContext context, String verificationId, String userOTP) {
-    _executeWithContext(
+    authRepository.verifyOTP(
       context: context,
-      callback: (ctx) => authRepository.verifyOTP(
-        context: ctx,
-        verificationId: verificationId,
-        userOTP: userOTP,
-      ),
+      verificationId: verificationId,
+      userOTP: userOTP,
     );
   }
 
   void saveUserDataToFirebase(
       BuildContext context, String name, File? profilePic) {
-    _executeWithContext(
+    authRepository.saveUserDataToFirebase(
+      name: name,
+      profilePic: profilePic,
+      ref: ref,
       context: context,
-      callback: (ctx) => authRepository.saveUserDataToFirebase(
-        name: name,
-        profilePic: profilePic,
-        ref: ref,
-        context: ctx,
-      ),
     );
   }
 
