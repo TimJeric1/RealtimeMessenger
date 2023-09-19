@@ -86,7 +86,6 @@ class ChatRepository {
     DateTime timeSent,
     String recieverUserId,
   ) async {
-
       var recieverChatContact = ChatContact(
         name: senderUserData.name,
         profilePic: senderUserData.profilePic,
@@ -137,10 +136,6 @@ class ChatRepository {
       timeSent: timeSent,
       messageId: messageId,
     );
-
-
-
-
       await _firestore
           .collection('users')
           .doc(_auth.currentUser!.uid)
