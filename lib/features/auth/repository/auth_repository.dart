@@ -107,8 +107,6 @@ class AuthRepository {
               profilePic,
             );
       }
-
-
       var user = UserModel(
         name: name,
         uid: uid,
