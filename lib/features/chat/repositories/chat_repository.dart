@@ -172,13 +172,10 @@ class ChatRepository {
     try {
       var timeSent = DateTime.now();
       UserModel? recieverUserData;
-
         var userDataMap =
             await _firestore.collection('users').doc(recieverUserId).get();
         recieverUserData = UserModel.fromMap(userDataMap.data()!);
-
       var messageId = const Uuid().v1();
-
 
       _saveDataToContactsSubcollection(
         senderUser,
@@ -187,7 +184,6 @@ class ChatRepository {
         timeSent,
         recieverUserId,
       );
-
 
       _saveMessageToMessageSubcollection(
         recieverUserId: recieverUserId,
