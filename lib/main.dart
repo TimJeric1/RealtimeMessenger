@@ -15,7 +15,7 @@ import 'main_screen.dart';
 
 void main() async {
   await _initializeFirebase();
-  runApp(const AppProviderScope());
+  runApp(const MyApp());
 }
 
 Future<void> _initializeFirebase() async {
@@ -27,17 +27,6 @@ Future<void> _initializeFirebase() async {
     );
   } else {
     Firebase.app();
-  }
-}
-
-class AppProviderScope extends StatelessWidget {
-  const AppProviderScope({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const ProviderScope(
-      child: MyApp(),
-    );
   }
 }
 
